@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Movies Info</string>
+    <string name="title">Title:</string>
+    <string name="year">Year:</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="search_by_name">Search By Name</string>
+    <string name="movie">Movie</string>
+    <string name="series">Series</string>
+    <string name="episode">Episode</string>
+    <string name="rated">Rated:</string>
+    <string name="released">Released:</string>
+    <string name="runtime">Runtime:</string>
+    <string name="genre">Genre:</string>
+    <string name="director">Director:</string>
+    <string name="writer">Writer:</string>
+    <string name="actors">Actors:</string>
+    <string name="plot">Plot:</string>
+    <string name="language">Language:</string>
+    <string name="country">Country:</string>
+    <string name="awards">Awards:</string>
+    <string name="ratings">Ratings:</string>
+    <string name="metascore">Metascore:</string>
+    <string name="imdbrating">imdbRating:</string>
+    <string name="imdbvotes">imdbVotes:</string>
+    <string name="type">Type:</string>
+    <string name="dvd">DVD:</string>
+    <string name="boxOffice">BoxOffice:</string>
+    <string name="production">Production:</string>
+    <string name="website">Website:</string>
+
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="error_in_downloading_data">Error in donwloading data</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="category">Category</string>
+</resources>

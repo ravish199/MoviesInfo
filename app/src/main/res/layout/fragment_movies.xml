@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.example.testapp.view.MoviesFragment.CAT"/>
+        <variable
+            name="fragement"
+            type="com.example.testapp.view.MoviesFragment" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MoviesFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/categoryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        android:text="@string/category"
+        app:layout_constraintBottom_toBottomOf="@+id/catRadioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/catRadioGroup"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <RadioGroup
+        android:id="@+id/catRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/border_rect"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/categoryTextView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/movieRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> fragement.getCategory(CAT.movie)}"
+            android:text="@string/movie" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/seriesRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> fragement.getCategory(CAT.series)}"
+            android:text="@string/series" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/episodeRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> fragement.getCategory(CAT.episode)}"
+            android:text="@string/episode" />
+
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_70"
+        android:layout_margin="@dimen/margin_10"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="@string/search_by_name"
+        app:layout_constraintTop_toBottomOf="@id/catRadioGroup">
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/search_by_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/catRadioGroup"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movieRView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_10"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
